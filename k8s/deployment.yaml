@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: womskeir
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: womskeir
+  template:
+    metadata:
+      labels:
+        app: womskeir
+    spec:
+      containers:
+      - image: okteto.dev/womskeir:latest
+        name: womskeir
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
+        - name: ProxySite
+          value: "www.crazygames.com"
+        - name: Vless_UUID
+          value: "606744b2-7f21-454b-950c-95c1b706ca5c"
+        - name: Vless_Path
+          value: "/606744b2-7f21-454b-950c-95c1b706ca5c"
+        - name: Vmess_UUID
+          value: "d9d2b478-2790-4c3f-99b1-99d1f3316d02"
+        - name: Vmess_Path
+          value: "/d9d2b478-2790-4c3f-99b1-99d1f3316d02"
+        - name: Share_Path
+          value: "/Share039"
