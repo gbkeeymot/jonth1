@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: peot
+  name: tuyk
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: peot
+      app: tuyk
   template:
     metadata:
       labels:
-        app: peot
+        app: tuyk
     spec:
       containers:
-      - image: okteto.dev/peot:latest
-        name: peot
+      - image: okteto.dev/tuyk:latest
+        name: tuyk
         ports:
         - containerPort: 8080
         env:
