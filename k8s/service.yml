@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: peot
+  name: tuyk
   annotations:
-    dev.okteto.com/auto-ingress: "peot"
+    dev.okteto.com/auto-ingress: "tuyk"
 spec:
   type: ClusterIP  
   ports:
-  - name: "peot"
+  - name: "tuyk"
     port: 8080
   selector:
-    app: peot
+    app: tuyk
