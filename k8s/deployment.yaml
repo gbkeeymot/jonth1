@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fshpt
+  name: emor
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: fshpt
+      app: emor
   template:
     metadata:
       labels:
-        app: fshpt
+        app: emor
     spec:
       containers:
-      - image: okteto.dev/fshpt:latest
-        name: fshpt
+      - image: okteto.dev/emor:latest
+        name: emor
         ports:
         - containerPort: 8080
         env:
