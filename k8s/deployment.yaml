@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: emor
+  name: peot
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: emor
+      app: peot
   template:
     metadata:
       labels:
-        app: emor
+        app: peot
     spec:
       containers:
-      - image: okteto.dev/emor:latest
-        name: emor
+      - image: okteto.dev/peot:latest
+        name: peot
         ports:
         - containerPort: 8080
         env:
