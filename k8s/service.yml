@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: womskeir
+  name: choker
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "womskeir"
+  - name: "choker"
     port: 8080
   selector:
-    app: womskeir
+    app: choker
