@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: womskeir
+  name: choker
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: womskeir
+      app: choker
   template:
     metadata:
       labels:
-        app: womskeir
+        app: choker
     spec:
       containers:
-      - image: okteto.dev/womskeir:latest
-        name: womskeir
+      - image: okteto.dev/choker:latest
+        name: choker
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "www.crazygames.com"
+          value: "icook.tw"
         - name: Vless_UUID
-          value: "606744b2-7f21-454b-950c-95c1b706ca5c"
+          value: "51b61fee-67f4-4cff-ae64-16c8c837c693"
         - name: Vless_Path
-          value: "/606744b2-7f21-454b-950c-95c1b706ca5c"
+          value: "/51b61fee-67f4-4cff-ae64-16c8c837c693"
         - name: Vmess_UUID
-          value: "d9d2b478-2790-4c3f-99b1-99d1f3316d02"
+          value: "cb99fdce-14e8-44c7-bc67-a66c2ba939f5"
         - name: Vmess_Path
-          value: "/d9d2b478-2790-4c3f-99b1-99d1f3316d02"
+          value: "/cb99fdce-14e8-44c7-bc67-a66c2ba939f5"
         - name: Share_Path
           value: "/Share039"
