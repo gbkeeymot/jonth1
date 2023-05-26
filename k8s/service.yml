@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fshpt
+  name: emor
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "fshpt"
+  - name: "emor"
     port: 8080
   selector:
-    app: fshpt
+    app: emor
