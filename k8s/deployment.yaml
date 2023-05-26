@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: choker
+  name: fshpt
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: choker
+      app: fshpt
   template:
     metadata:
       labels:
-        app: choker
+        app: fshpt
     spec:
       containers:
-      - image: okteto.dev/choker:latest
-        name: choker
+      - image: okteto.dev/fshpt:latest
+        name: fshpt
         ports:
         - containerPort: 8080
         env:
